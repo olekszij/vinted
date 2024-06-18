@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import Cookies from 'js-cookie';
 
 const Signup = ({ handleToken }) => {
   const [username, setUsername] = useState('');
@@ -10,8 +9,6 @@ const Signup = ({ handleToken }) => {
   const [newsletter, setNewsletter] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
-
-  // const [token, setToken] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault();

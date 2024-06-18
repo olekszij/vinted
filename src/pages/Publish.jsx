@@ -130,7 +130,6 @@ const Publish = ({ token }) => {
           placeholder='200'
           value={price}
           onChange={(event) => {
-            // console.log(typeof event.target.value);
             setPrice(event.target.value);
           }}
         />

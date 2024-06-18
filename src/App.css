@@ -96,8 +96,9 @@ header {
 main {
   max-width: 1200px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  justify-content: left;
   margin: 20px auto;
 }
 .signup,
@@ -232,14 +233,18 @@ form input,
 }
 .picture-label {
   width: 100%;
-  margin-bottom: 10px;
-  background-color: #f2f2f2;
-  color: #0cb0ba;
+  margin-bottom: 20px;
+  background-color: #3fe8a7;
   padding: 10px;
-  border: #0cb0ba 2px solid;
   border-radius: 8px;
   cursor: pointer;
   text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.picture-label:hover {
+  box-shadow: none;
 }
 
 .pablish-form input {
@@ -269,15 +274,19 @@ label {
 @media screen and (max-width: 900px) {
   .searchbar {
     flex-grow: 1;
-    max-width: 30%;
+    max-width: 50%;
   }
-}
-@media screen and (max-width: 600px) {
+  .slider {
+    width: 100%;
+  }
+  .slider > .call-to-action {
+    width: 80%;
+  }
+  .publish-form {
+    width: 90%;
+  }
   .btn_nav,
   .disconnect {
     display: none;
-  }
-  .searchbar {
-    width: 100%;
   }
 }
