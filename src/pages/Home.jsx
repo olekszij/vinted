@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 import ProductCard from '../component/Card';
 import Slider from '../component/Slider';
 
@@ -41,9 +40,7 @@ const Home = ({ search }) => {
       <main>
         {data && data.offers.length > 0 ? (
           data.offers.map((offer) => (
-            <Link to={`/offers/${offer._id}`} key={offer._id}>
-              <ProductCard offer={offer} />
-            </Link>
+            <ProductCard offer={offer} key={offer._id} />
           ))
         ) : (
           <p>No offers found</p>
